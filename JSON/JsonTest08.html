@@ -1,0 +1,84 @@
+<script type="text/javascript">
+	
+	var obj8 =
+	[
+		"test"
+	]
+	
+	var obj8_1 =
+	[
+		"test1", "test2"
+	]
+	
+	var obj8_2 =
+	[
+		"test1", "test2", 123, 123+1
+	]
+	
+</script>
+
+<form>
+	
+	<input type="button" value="click" onclick="alert(obj8)">
+	<!-- test -->
+	<input type="button" value="click" onclick="alert(obj8_1)">
+	<!--  test1, test2 -->
+	<input type="button" value="click" onclick="alert(obj8_2)">
+	<!-- test1, test2, 123, 124 -->
+	
+	<br><br>
+	
+	<input type="button" value="click" onclick="alert(typeof obj8)">
+	<!-- object -->
+	<input type="button" value="click" onclick="alert(typeof obj8_1)">
+	<!-- object -->
+	<input type="button" value="click" onclick="alert(typeof obj8_2)">
+	<!-- object -->
+	
+	<br><br>
+	
+	<input type="button" value="click" onclick="alert(obj8[0])">
+	<!-- test -->
+	<input type="button" value="click" onclick="alert(typeof obj8[0])">
+	<!-- string -->
+	<input type="button" value="click" onclick="alert(obj8[1])">
+	<!-- undefined -->
+	
+	<br><br>
+	
+	<input type="button" value="click" onclick="alert(obj8_1[0])">
+	<!-- test1 -->
+	<input type="button" value="click" onclick="alert(obj8_1[1])">
+	<!-- test2 -->
+	<input type="button" value="click" onclick="alert(typeof obj8_1[0])">
+	<!-- string -->
+	<input type="button" value="click" onclick="alert(typeof obj8_1[1])">
+	<!-- string -->
+	<input type="button" value="click" onclick="alert(obj8_1[0] + obj8_1[1])">
+	<!-- test1test2 -->
+	
+	<br><br>
+	
+	<input type="button" value="click" onclick="alert(obj8_2[1])">
+	<!-- test2 -->
+	<input type="button" value="click" onclick="alert(obj8_2[2])">
+	<!-- 123 -->
+	<input type="button" value="click" onclick="alert(typeof obj8_2[1])">
+	<!-- string -->
+	<input type="button" value="click" onclick="alert(typeof obj8_2[2])">
+	<!-- number -->
+	<input type="button" value="click" onclick="alert(obj8_2[1] + obj8_2[2])">
+	<!-- test2123 -->
+	
+	<br><br>
+	
+	<input type="button" value="click" onclick="alert(obj8_2[2] + obj8_2[3])">
+	<!-- 247 -->
+	
+	<input type="button" value="click" onclick="alert(obj8_2[3] + obj8_2[4])">
+	<!-- NaN -->
+	
+	
+	
+	
+</form>

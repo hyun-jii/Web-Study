@@ -1,0 +1,75 @@
+<script type="text/javascript">
+	
+	// ①
+	/*
+	var myJSONObject7 = 
+	{
+		"test" : 123
+	}
+	*/
+	
+	//②
+	/*
+	var myJSONObject7 = 
+	{
+		"test" : 123.456
+	}
+	*/
+	
+	//③
+	/*
+	var myJSONObject7 = 
+	{
+		"test" : true
+	}
+	*/
+	//④
+	var myJSONObject7 = 
+	{
+		"test" : null
+	}
+	
+</script>
+
+<form>
+	
+	<input type="button" value="click" onclick="alert(myJSONObject7.test)">
+	<!-- ①-> 123 -->
+	<!-- ②-> 123.456 -->
+	<!-- ③-> true -->
+	<!-- ④-> null -->
+	
+	<input type="button" value="click" onclick="alert(typeof myJSONObject7.test)">
+	<!-- ①-> number -->
+	<!-- ②-> number -->
+	<!-- ③-> boolean -->
+	<!-- ④-> object -->
+	
+	<br><br>
+	
+	<input type="button" value="click" onclick="myJSONObject7.test=false; alert(myJSONObject7.test)">
+	<!-- -> false -->
+	
+	<input type="button" value="click" onclick="myJSONObject7.test=false; alert(typeof myJSONObject7.test)">
+	<!-- -> boolean -->
+	
+	<br><br>
+	
+	<input type="button" value="click" onclick="myJSONObject7.test=123; alert(myJSONObject7.test)">
+	<!-- -> 123 -->
+	
+	<input type="button" value="click" onclick="myJSONObject7.test=123; alert(typeof myJSONObject7.test)">
+	<!-- -> number -->
+	
+	<br><br>
+	
+	<input type="button" value="click" onclick="myJSONObject7.test='123'; alert(myJSONObject7.test)">
+	<!-- -> 123 -->
+	
+	<input type="button" value="click" onclick="myJSONObject7.test='123'; alert(typeof myJSONObject7.test)">
+	<!-- -> string -->
+	
+	
+	
+	
+</form>

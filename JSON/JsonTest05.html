@@ -1,0 +1,27 @@
+<script type="text/javascript">
+	
+	var myJSONObject5 = 
+	{
+		"test" : function(arg)
+		{
+			alert("Method Test :" + arg);
+		} 
+	}
+	
+	var t = myJSONObject5.test;
+	
+</script>
+
+<form>
+	<input type="button" value="click" onclick="t('hanhyunsu')">
+	<!-- ->Method Test : hanhyunsu -->
+	
+	<input type="button" value="click" onclick="eval('var a=' + myJSONObject5.test); a('hanhyunsu')">
+	<!-- ->Method Test : hanhyunsu -->
+	
+	<input type="button" value="click" onclick="eval('(' + myJSONObject5.test + ')(\'hanhyunsu\')');">
+	<!-- myJSONObject5.test('hanhyunsu') -->
+	<!-- ->Method Test : hanhyunsu -->
+	
+	
+</form>

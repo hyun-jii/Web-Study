@@ -1,0 +1,30 @@
+<script type="text/javascript">
+	
+	var myJSONObject4 = 
+	{
+		"test" : function()
+		{
+			alert("Method Test~!!!");
+		} 
+	}
+	
+</script>
+
+<form>
+	<input type="button" value="click" onclick="myJSONObject4.test">
+	<!-- -> x -->
+	<input type="button" value="click" onclick="alert(myJSONObject4.test)">
+	<!-- -> function()
+	     {
+	     	alert("Method Test~!!!");
+	     }
+     -->
+     	<input type="button" value="click" onclick="alert(myJSONObject4.test())">
+     	<!-- -> Method Test~!!! -->
+     	<!-- -> undefined -->
+     	
+     	<!-- eval() : 변수를 자바스크립트의 함수처럼 사용할 수 있도록 해 주는 함수 -->
+     	<!-- 		  정적인 문자열을 동적인 코드 형식으로 처리 -->
+     	<input type="button" value="click" onclick="eval('a=' + myJSONObject4.test); a();">
+     
+</form>
